@@ -1,5 +1,4 @@
 <?php
-ob_start();
 use App\day01\MassCalculator;
 
 require_once __DIR__ . '/../../vendor/autoload.php';
@@ -28,4 +27,3 @@ foreach ($input as $item) {
 
 \App\helpers\ResultParser::parseResult($total);
 \App\helpers\Timer::finish();
-ob_end_flush();
