@@ -2,6 +2,8 @@
 FROM php:8.0 AS build
 COPY . /app
 WORKDIR /app
+RUN apt-get update && apt-get install libzip-dev -y
+RUN docker-php-ext-install zip
 RUN php composer.phar install
 
 # run phase
